@@ -28,8 +28,9 @@ algod_client = algod.AlgodClient(
 #Recuerda que los datos de la llave privada nunca deben estar en código
 #Aquí lo hacemos para facilitar la explicación
 
-my_address = "TU DIRECCION"
-private_key = mnemonic.to_private_key("Tu mnemónico de 25 palabras")
+my_address = "Q75CM4AACAE4ARAZLYF47OGIWZHJSIHSFVUS3BZSKEK42CGWVRA2NRJ7BM"
+private_key = mnemonic.to_private_key("secret donor post clay taste under alarm bulb girl brand minor urban decrease census adult weasel alpha private gym mechanic young zero yellow above cousin")
+#("Tu mnemónico de 25 palabras")
 
 #Verificando el balance de la cuenta
 
@@ -42,8 +43,10 @@ params = algod_client.suggested_params()
 # comment out the next two (2) lines to use suggested fees
 params.flat_fee = True
 params.fee = constants.MIN_TXN_FEE
-receiver = "DIRECCION DEL RECEPTOR"
-note = "My first transaction".encode()
+receiver = "T5WT6Q5AXJNG2F57MHSGMSD7BWOCT77XD2LLVPGQZECCRZFG2CNABQMGRU"
+#"DIRECCION DEL RECEPTOR"
+note = "Probando".encode()
+#"My first transaction".encode()
 amount = 1000000
 unsigned_txn = transaction.PaymentTxn(my_address, params, receiver, amount, None, note)
 
